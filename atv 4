@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+#define calcular_dobro(x) x * 2
+// EXERCÍCIO: Analise a função calcular_dobro QUE RECEBE UM INTEIRO E RETORNA O DOBRO.
+// Você deve alterar o código dentro do main para declarar um número, ler o número (com a função le_numero), usar a função para calcular o dobro e imprimir na tela o número e o seu dobro
+
+// Exemplo:
+// Digite um número inteiro:
+// 6
+// O dobro de 6 é 12
+
+int main(){
+    int a;
+    cout << "digite um numero: " << endl;
+    cin >> a;
+    cout << "o dobro de " << a << " e " << calcular_dobro(a);
