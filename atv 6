@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+// EXERCÍCIO: CRIE UMA FUNÇÃO calcular_media3 QUE RECEBE 3 NOTAS (DOUBLE)
+// E RETORNA A MÉDIA ARITMÉTICA DAS NOTAS
+// NO main, LEIA AS 3 NOTAS DO USUÁRIO (usando a função le_numero_double) E IMPRIMA A MÉDIA.
+
+double calcular_media3(double n1, double n2, double n3){
+
+    double media;
+    media = (n1 + n2 + n3)/3;
+    return media;
+}
+
+template <typename type>
+type ler(string msg){
+    cout << msg;
+    type num;
+    cin >> num;
+    return num;
+}
+
+int main(){
+    double a, b, c;
+    a = ler<double>("Digite um número:");
+    b = ler<double>("Digite um número:");
+    c = ler<double>("Digite um número:");
+
+    cout << "Média: " << calcular_media3(a, b, c) << endl;
+}
