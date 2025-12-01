@@ -1,0 +1,49 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+struct data{
+    int dia;
+    int mes;
+    int ano;
+};
+
+struct aluno{
+    data nascimento;
+    string nome;
+    string matricula;
+    string curso;
+    int cpf,tel;
+};
+aluno cadastrar_aluno(){
+    aluno a;
+    cout << "insira o nome do aluno: " << endl;
+    cin >> a.nome;
+    cout << "insira dia, mes e ano do aluno " << endl;
+    cin >> a.nascimento.dia;
+    cin >> a.nascimento.mes;
+    cin >> a.nascimento.ano;
+    cout << "insira a matricula: " << endl;
+    cin >> a.matricula;
+    cout << "insira o curso: " << endl;
+    cin >> a.curso;
+    cout << "insira o telefone: " << endl;
+    cin >> a.tel;
+    cout << "insira o cpf: " << endl;
+    cin >> a.cpf;
+    return a;
+}
+ void imprimir_aluno(aluno a){
+    cout << "nome: " << a.nome << endl;
+    cout << "data de nascimento: " << a.nascimento.dia << "/" << a.nascimento.mes << "/" << a.nascimento.ano << endl;
+    cout << "matricula: " << a.matricula << endl;
+    cout << "curso: " << a.curso << endl;
+    cout << "telefone: " << a.tel << endl;
+    cout << "cpf: " << a.cpf << endl;
+ }
+int main(){
+    aluno al1 = cadastrar_aluno();
+
+    imprimir_aluno(al1);
+    return 0;
+}
